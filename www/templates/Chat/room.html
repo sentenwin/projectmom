@@ -1,0 +1,48 @@
+<ion-view title="Mothers Chat">
+  
+    <ion-content has-bouncing="true" class="has-header has-footer" delegate-handle="userMessageScroll">
+        <div ng-repeat="chat in chats" class="message-wrapper" on-hold="onMessageHold($event, $index, chat)">
+            <div ng-if="loggedUser.$id !== chat.created_by">
+                <img ng-if="chatUser[chat.created_by].avatar_personal !== '' " ng-src="data:image/jpeg;base64,{{chatUser[chat.created_by].avatar_personal}}" width="100%" class="profile-pic left" ng-click="viewProfile(chat)" />
+                <img ng-if="chatUser[chat.created_by].avatar_personal == '' " ng-src="{{chatUser[chat.created_by].avatar}}" ng-click="showAvatar()" class="profile-pic left" ng-click="viewProfile(chat)" />
+                <div class="chat-bubble left">
+                    <div class="message" ng-bind-html="chat.content | nl2br" autolinker>
+                    </div>
+                    <div class="message-detail">
+                        <span ng-click="viewProfile(chat)" class="bold">{{chat.username}}</span>,
+                        <span am-time-ago="chat.created_at"></span>
+                    </div>
+                </div>
+            </div>
+            <div ng-if="loggedUser.$id === chat.created_by">
+                
+                <img ng-if="(loggedUser.personalData.avatar_personal && loggedUser.personalData.avatar_personal !== '')" ng-src="data:image/jpeg;base64,{{loggedUser.personalData.avatar_personal}}" ng-click="viewProfile(chat)" class="profile-pic right" />
+                
+                <img ng-if="(!loggedUser.personalData.avatar_personal || loggedUser.personalData.avatar_personal == '') && (loggedUser.personalData.avatar && loggedUser.personalData.avatar !== '')" ng-src="{{loggedUser.personalData.avatar}}" ng-click="viewProfile(chat)" class="profile-pic right">
+                
+                <img ng-if="(!loggedUser.personalData.avatar_personal || loggedUser.personalData.avatar_personal == '') && (!loggedUser.personalData.avatar || loggedUser.personalData.avatar == '')" ng-src="{{defAvatar}}" ng-click="viewProfile(chat)" class="profile-pic right">
+
+                <div class="chat-bubble right">
+                    <div class="message" ng-bind-html="chat.content | nl2br" autolinker>
+                    </div>
+                    <div class="message-detail">
+                        <span ng-click="viewProfile(chat)" class="bold">{{chat.username}}</span>,
+                        <span am-time-ago="chat.created_at"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="cf"></div>
+        </div>
+    </ion-content>
+    <form name="sendMessageForm" ng-submit="submitAddMessage(sendMessageForm)" novalidate>
+        <ion-footer-bar class="bar-stable item-input-inset message-footer" keyboard-attach>
+            <label class="item-input-wrapper chat-input">
+                <textarea ng-model="newMessage" value="" placeholder="Send a message..." required minlength="1" maxlength="1500" msd-elastic></textarea>
+            </label>
+            <div class="footer-btn-wrap">
+                <button class="button w3-red  button-icon icon ion-android-send footer-btn" type="submit" ng-disabled="!newMessage || newMessage === ''">
+                </button>
+            </div>
+        </ion-footer-bar>
+    </form>
+</ion-view>

@@ -1,0 +1,86 @@
+<!--<ion-view title="Personal Info" style="text-align:center;background-color:#f6f6f6">
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button menu-toggle="right" ng-click="saveSettings()" class="button button-icon icon ion-android-done"></button>
+    </ion-nav-buttons>
+    <ion-content class="padding">
+        <form ng-submit="saveSettings()">
+            <div class="list">
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">First Name</span>
+                    <input type="text" ng-model="loggedUser.personalData.first_name" placeholder="First Name">
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Last Name</span>
+                    <input type="text" ng-model="loggedUser.personalData.last_name" placeholder="Last Name">
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Contact Number</span>
+                    <input type="text" ng-model="loggedUser.personalData.number" placeholder="Number">
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Address</span>
+                    <textarea type="text" ng-model="loggedUser.personalData.address" placeholder="Address"></textarea>
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Email</span>
+                    <input type="text" ng-model="loggedUser.personalData.email" placeholder="Email">
+                </label>
+
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Username</span>
+                    <input type="text" ng-model="loggedUser.personalData.username" placeholder="Username">
+                </label>
+
+                <label class="item">
+                    <button class="button button-block button-positive" type="submit">Save</button>
+                </label>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>-->
+<ion-view title="Personal Info" style="text-align:center;">
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button menu-toggle="right" ng-click="saveSettings()" class="button button-icon icon ion-android-done"></button>
+    </ion-nav-buttons>
+    <ion-content class="padding">
+        <form ng-submit="saveSettings()">
+            <div class="list">
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">First Name</span>
+                    <input type="text" ng-model="loggedUser.personalData.first_name" placeholder="First Name">
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Last Name</span>
+                    <input type="text" ng-model="loggedUser.personalData.last_name" placeholder="Last Name">
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Contact Number</span>
+                    <input type="text" ng-model="loggedUser.personalData.number" placeholder="Number">
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Address</span>
+                    <textarea type="text" ng-model="loggedUser.personalData.address" placeholder="Address"></textarea>
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Email</span>
+                    <input type="text" ng-model="loggedUser.personalData.email" placeholder="Email">
+                </label>
+
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Username</span>
+                    <input type="text" ng-model="loggedUser.personalData.username" placeholder="Username">
+                </label>
+
+                <label class="item">
+                    <button class="button button-block button-assertive" type="submit">Save</button>
+                </label>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>

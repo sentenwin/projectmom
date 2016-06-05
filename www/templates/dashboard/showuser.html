@@ -1,0 +1,97 @@
+<ion-view title="User Details" >
+   
+   <!-- <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>-->
+    <ion-content class="has-header padding">
+   <!--  <header class="w3-container w3-blue-grey w3-padding" id="myHeader">
+    <div class="w3-center">
+    <h2 class="w3-blue-grey"><font color="white">User Details</h2>
+    <p> Here You will see the user details</p>
+    </font>
+  </div>
+</header>-->
+
+     <div class=" w3-card  w3-light-grey">
+        <div class="profile-item">
+          <div class="profile-picture big-profile-picture">
+                                <img ng-if="(userdetails.avatar_personal && userdetails.avatar_personal !== '')" ng-src="data:image/jpeg;base64,{{userdetails.avatar_personal}}" width="100%" ng-click="showAvatar()" />
+                    
+                    <img ng-if="(!userdetails.avatar_personal || userdetails.avatar_personal == '') && (userdetails.avatar && userdetails.avatar !== '')" ng-src="{{userdetails.avatar}}" ng-click="showAvatar()">
+
+                    <img ng-if="(!userdetails.avatar_personal || userdetails.avatar_personal == '') && (!userdetails.avatar || userdetails.avatar == '')" ng-src="{{defAvatar}}" ng-click="showAvatar()">
+          </div>
+          <h2 class="profile-name dark">{{userdetails.first_name}} {{userdetails.last_name}}</h2>
+
+          
+        </div>
+      </div>
+           <div class="card">
+  <div class="item item-text-wrap">
+   <strong>User Name </strong>&nbsp;&nbsp;{{userdetails.username}}<br>
+  
+ 
+   <strong>Email Id </strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{userdetails.email}}<br>
+    <strong>User Role </strong>&nbsp;&nbsp;&nbsp;&nbsp;{{userdetails.role}}
+  </div>
+</div>
+       <!-- <ion-item class="profile-item" >
+          <div class="profile-info"> <strong>User Name </strong>{{userdetails.username}}</div>
+        </ion-item>
+        <ion-item class="profile-item">
+            <div class="profile-info"><strong>Email Id </strong>{{userdetails.email}}</div>
+        </ion-item>
+         <ion-item class="profile-item">
+            <div class="profile-info"><strong>User Role </strong>{{userdetails.role}}</div>
+        </ion-item>   -->
+            <div class="w3-card-4" >
+ 
+<header class="w3-container w3-red">
+  <center><h3 class="w3-text-white ">Enter Checkup Details</h3></center>
+</header>
+
+<div class="w3-container">
+  <form ng-submit="checkupdetails()">
+         <div class="list">
+                <label class="item item-input item-floating-label">
+                    <span class="input-label w3-text-red">Checkup Date</span>
+                    <input type="text" ng-model="checkup.date" placeholder="Date">
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label w3-text-red">Prescription</span>
+                    <textarea type="text" ng-model="checkup.detail"  placeholder="Prescription"></textarea>
+                </label>  
+                                     
+                <label class="item">
+                    <button class="w3-btn w3-red  w3-section" type="submit" ng-disabled="!checkup.date || !checkup.detail ">Save</button>
+                </label>
+                
+            </div>
+          </form>
+</div>
+
+</div>
+
+        <!-- <div class="card">
+            <form ng-submit="checkupdetails()">
+         <div class="list">
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Checkup Date</span>
+                    <input type="text" ng-model="checkup.date" placeholder="Date">
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Prescription</span>
+                    <textarea type="text" ng-model="checkup.detail"  placeholder="Prescription"></textarea>
+                </label>  
+                                     
+                <label class="item">
+                    <button class="button button-block button-positive" type="submit">Save</button>
+                </label>
+                
+            </div>
+          </form>
+ 
+      </div>-->
+    </ion-content>
+
+</ion-view>

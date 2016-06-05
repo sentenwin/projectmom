@@ -1,0 +1,28 @@
+<ion-view title="Book Parking Slot" >
+    <ion-content>
+    <div class="item item-image">
+    <img src="img/slot.jpg"  >
+  </div>
+        <form >
+            <div class="list">
+                <label class="item item-input ">
+                    <span class="input-label">Vechile Number</span>
+                    <input type="text" ng-model="bookslot.vechile" placeholder="Vechile Number KA-1234">
+                </label>
+                  <label class="item item-input ">
+                    <span class="input-label">Start Time</span>
+                    <input type="time" ng-model="bookslot.stiming" placeholder="Start Time">
+                </label>
+               <label class="item item-input ">
+                    <span class="input-label">End Time</span>
+                    <input type="time" ng-model="bookslot.etiming" placeholder="End Time">
+                </label>
+             
+
+                  <label class="item">
+                    <button class="button button-block button-positive" ng-click="bookParkingSlot()">Book Parking Slot</button>
+                </label>                                        
+            </div>
+        </form>
+    </ion-content>
+</ion-view >

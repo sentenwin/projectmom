@@ -1,0 +1,58 @@
+<ion-view title="Baby Growth" style="background-color:#f6f6f6">
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+ <ion-tabs class="tabs-striped tabs-color-assertive tabs-icon-top">
+
+  <ion-tab title="Baby Growth" icon-on="ion-arrow-graph-up-right" icon-off="ion-arrow-graph-up-right" href="#/app/growth">
+    <!-- Tab 1 content -->
+  </ion-tab>
+
+  <ion-tab title="Trimester" icon-on="ion-calendar" icon-off="ion-ios-calendar-outline" href="#/app/trimester">
+    <!-- Tab 2 content -->
+  </ion-tab>
+
+ <!-- <ion-tab title="Settings" icon-on="ion-ios-clock" icon-off="ion-ios-clock-outline">
+  
+  </ion-tab>-->
+
+</ion-tabs>
+
+
+    <ion-content class="has-header">
+         <ion-refresher pulling-icon="ion-arrow-down-b" on-refresh="refreshItems()">
+          </ion-refresher>
+
+          <div class="list list-inset">
+            <label class="item item-input">
+              <i class="icon ion-search placeholder-icon"></i>
+              <input type="text" placeholder="Search here..." ng-model="search">
+            </label>
+          </div>
+
+       <!-- <ion-list>
+            <ion-item ng-repeat="user in filterdata = (alluser | orderBy:reverse | filter:search)" ng-if='user.personalData.role != undefined' ui-sref="app.showuser({roomId: user.$id})">
+                <h2>{{user.personalData.email}}</h2>
+                <p>{{user.personalData.role}}</p>
+                  <p>{{user.personalData.number}}</p>
+            </ion-item>
+        </ion-list>-->
+        <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="growth in babygrowth| orderBy:sortType:sortReverse | filter:search" type="item-text-wrap"  ui-sref="app.babygrowth({growthid: growth.id})">
+        <img ng-src="{{growth.Img}}">
+        <h2>{{growth.title2}}</h2>
+       <!-- <p>{{growth.Specialty}}</p>-->
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+        
+      </ion-item>
+    <div ng-if="alluser !== undefined && !alluser.length" class="no-results">
+    <ion-spinner icon="spiral"></ion-spinner>
+
+      <h2 style="text-align: center">Loading </h2>
+    </div>
+     </ion-content>
+   
+   
+
+</ion-view>

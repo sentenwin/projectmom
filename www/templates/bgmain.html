@@ -1,0 +1,19 @@
+<!-- 
+  Create tabs with an icon and label, using the tabs-positive style. 
+  Each tab's child <ion-nav-view> directive will have its own 
+  navigation history that also transitions its views in and out.
+-->
+
+<ion-view title="Playlists">
+    <ion-tabs class="tabs-icon-top">
+
+        <ion-tab title="Personal Info" icon="icon ion-person" href="#/app/profile/personal">
+            <ion-nav-view name="tab-personal"></ion-nav-view>
+        </ion-tab>
+
+        <ion-tab title="Social Links" icon="icon ion-heart" href="#/app/profile/social">
+            <ion-nav-view name="tab-social"></ion-nav-view>
+        </ion-tab>
+
+    </ion-tabs>
+</ion-view>

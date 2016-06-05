@@ -1,0 +1,50 @@
+<ion-view title="Schemes" >
+    <ion-content>
+
+
+     <div class="w3-card-4" >
+ 
+<header class="w3-container w3-light-grey">
+  <center><h3>Enter Scheme Details</h3></center>
+</header>
+
+<div class="w3-container">
+ <form ng-submit="addScheme()">
+            <div class="list">
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Name</span>
+                    <input type="text" ng-model="schemes.name" placeholder=" Name">
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Benefits</span>
+                    <textarea type="text" ng-model="schemes.benefit"  placeholder="Benefits"></textarea>
+                </label>                             
+                <label class="item">
+                    <button class="button button-block button-assertive" type="submit" ng-disabled="!schemes.name || !schemes.benefit"><strong>Save</strong></button>
+                </label>
+                
+            </div>
+        </form>
+</div>
+
+</div>
+   <!-- <div class="w3-card-4 w3-white">
+        <form ng-submit="addScheme()">
+            <div class="list">
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Scheme Name</span>
+                    <input type="text" ng-model="schemes.name" placeholder="Scheme Name">
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Benefits</span>
+                    <textarea type="text" ng-model="schemes.benefit"  placeholder="Scheme Benefits"></textarea>
+                </label>                             
+                <label class="item">
+                    <button class="button button-block button-assertive" type="submit">Save</button>
+                </label>
+                
+            </div>
+        </form>
+    </div>-->
+    </ion-content>
+</ion-view >

@@ -1,0 +1,38 @@
+<ion-view title="SaveMom" style="text-align:center;background-color:#f6f6f6">
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right" >
+        <a class="button button-icon icon ion-ios-telephone" href="tel:+919942331432"></a>
+    </ion-nav-buttons>
+    <ion-content class="has-header">
+
+    <div class="item item-image">
+    <img src="img/savemom.jpg" style="width:50%">
+  </div>
+  
+        <ion-list>
+            <ion-item ng-repeat="about in aboutus" >
+
+             <div class="w3-card-4" style="width:100%;">
+             
+            <header class="w3-container w3-red" style="padding-bottom: 5px; padding-top: 5px;">
+              <h2 style="color:#FFF; text-align: center; font-size: 25px">{{about.name}}</h2>
+            </header>
+
+                <div class="w3-container item-text-wrap w3-margin-top">
+               
+                <p> <b>{{about.description}}</b></p>
+              
+                </div>
+                <br/>
+            </div>           
+            </ion-item>
+        </ion-list>
+       <!--  <a href="tel:+919942331432" class="button button-balanced ">
+            <i class="icon ion-ios-telephone"></i>
+        </a>-->
+    </ion-content>
+
+</ion-view> 
+    

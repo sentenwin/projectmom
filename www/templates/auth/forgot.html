@@ -1,0 +1,22 @@
+<ion-view hide-back-button="true" style="text-align:center;">
+    <ion-nav-title>
+        <div align=center>Forgot Password</div>
+    </ion-nav-title>
+    <ion-content style="background: url(img/loginbg.JPG) center; background-size: cover; text-align:center;">
+        <form class="form-signin" role="form" name="forgotForm">
+            <div class="list">
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Email Address</span>
+                    <input type="email" name="email" ng-model="user.email" placeholder="Email Address">
+                    <p ng-show="regForm.email.$invalid">Enter a valid email.</p>
+                </label>
+            </div>
+         <!--   <p style="color:red;" ng-show="regError">{{regErrorMessage}}</p>-->
+            <button class="button button-block button-assertive" ng-click="Forgot()" ng-disabled="!user.email">
+                Send Email
+            </button>
+        </form>
+
+        <div align=center><a ui-sref="normallogin">Sign In</a></div>
+    </ion-content>
+</ion-view>

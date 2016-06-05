@@ -1,0 +1,34 @@
+<ion-modal-view>
+    <ion-header-bar class="bar-assertive">
+        <h1 class="title">Profile Settings</h1>
+        <div class="buttons">
+            <button class="button button-clear" ng-click="closeSettings()">Close</button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <form ng-submit="saveSettings()">
+            <div class="list">
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">First Name</span>
+                    <input type="text" ng-model="loggedUser.personalData.first_name" placeholder="First Name">
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Last Name</span>
+                    <input type="text" ng-model="loggedUser.personalData.last_name" placeholder="Last Name">
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Email</span>
+                    <input type="text" ng-model="loggedUser.personalData.email" placeholder="Email">
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Username</span>
+                    <input type="text" ng-model="loggedUser.personalData.username" placeholder="Username">
+                </label>
+
+                <label class="item">
+                    <button class="button button-block button-positive" type="submit">Save</button>
+                </label>
+            </div>
+        </form>
+    </ion-content>
+</ion-modal-view>

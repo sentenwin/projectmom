@@ -1,0 +1,20 @@
+<ion-view title="Tips" hide-back-button="false">
+ 
+  <ion-content class="has-header padding">
+      
+<div  ng-repeat="item in healthtips">
+     
+            <center> <img src="{{item.Img}}" height="70%" width="70%" >  </center>
+           <!-- <img src="img/Special.jpg" height="70%" width="70%">-->
+             <div class="card ">
+                   <div class="item item-body">
+            <b>  {{item.tips}}</font>
+                </b>
+                </div></div>
+                <br><br>
+</div>
+
+
+
+  </ion-content>
+</ion-view>

@@ -1,0 +1,98 @@
+<ion-side-menus enable-menu-with-back-views="false">
+    <ion-side-menu-content >
+        <ion-nav-bar class="bar-assertive">
+            <ion-nav-back-button>
+            </ion-nav-back-button>
+            <ion-nav-buttons side="left">
+                <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+                </button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+        <ion-nav-view name="menuContent"></ion-nav-view>
+    </ion-side-menu-content>
+    <ion-side-menu side="left" >
+          <ion-header-bar class="expanded" nav-clear menu-close ui-sref="app.profile.personal">
+              <img src="img/savemom.jpg" class="avatar motion spin fade">  
+       
+                 <div class="menu-bottom">
+              Welcome  {{loggedUser.personalData.first_name}}
+            </div>
+             
+          
+        </ion-header-bar>
+         <ion-content class="has-header" >
+            <br><br><br><br><br>
+            <ion-list >
+               <!-- <ion-item menu-close class="item item-avatar" href="#/app/profile/personal" >
+
+                    <img ng-if="(loggedUser.personalData.avatar_personal && loggedUser.personalData.avatar_personal !== '')" ng-src="data:image/jpeg;base64,{{loggedUser.personalData.avatar_personal}}" width="100%" ng-click="showAvatar()" />
+                    
+                    <img ng-if="(!loggedUser.personalData.avatar_personal || loggedUser.personalData.avatar_personal == '') && (loggedUser.personalData.avatar && loggedUser.personalData.avatar !== '')" ng-src="{{loggedUser.personalData.avatar}}" ng-click="showAvatar()">
+
+                    <img ng-if="(!loggedUser.personalData.avatar_personal || loggedUser.personalData.avatar_personal == '') && (!loggedUser.personalData.avatar || loggedUser.personalData.avatar == '')" ng-src="{{defAvatar}}" ng-click="showAvatar()">
+
+                    <div href="#/app/profile/personal" class="item-text-wrap" >
+                        <h2 >Hi {{loggedUser.personalData.first_name}}</h2>
+                        <p >Welcome to HelloDoctor</p>
+                    </div>
+
+                </ion-item>-->
+                <ion-item nav-clear menu-close href="#/app/about">
+                  <font color="darkpink" size="5"> <i class="icon ion-home"></i></font> &nbsp;&nbsp; AboutUs
+                </ion-item>
+                <!--  <ion-item nav-clear menu-close ng-show="(IsAdmin()) || (IsUser()) || (IsProUser())"  href="#/app/bookslot">
+                    BookSlot
+                </ion-item>-->
+               <!-- <ion-item nav-clear menu-close ng-show="(IsUser()) " href="#/app/pregnancyweek">
+                    pregnancyweek
+                </ion-item> -->
+                
+                <ion-item nav-clear menu-close ng-show="IsAdmin()" href="#/app/adduser"><font color="darkpink" size="5"> <i class="icon ion-android-person-add"></i></font> &nbsp;&nbsp;
+                    AddUser
+                </ion-item> 
+                 <ion-item nav-clear menu-close  href="#/app/showalluser" ng-show="IsAdmin()"><font color="darkpink" size="5"> <i class="icon ion-ios-people"></i></font> &nbsp;&nbsp;
+ 
+                    Show All Users
+                </ion-item>  
+                                                
+                 <ion-item nav-clear menu-close ng-show="IsAdmin()" href="#/app/schemes"><font color="darkpink" size="5"> <i class="icon ion-plus-circled"></i></font> &nbsp;&nbsp;
+                   Add Schemes
+                </ion-item>
+                <ion-item nav-clear menu-close ng-show="IsUser()" href="#/app/viewcheckup"><font color="darkpink" size="5"> <i class="icon ion-android-checkbox-outline"></i></font> &nbsp;&nbsp;
+ 
+                   Checkup Details
+                </ion-item>
+                   <ion-item nav-clear menu-close ng-show="IsUser()" href="#/app/tips"><font color="darkpink" size="5"> <i class="icon ion-clipboard"></i></font> &nbsp;&nbsp;
+                  Tips
+                </ion-item> 
+                 <ion-item nav-clear menu-close ng-show="IsUser()" href="#/app/growth"><font color="darkpink" size="5"> <i class="icon ion-egg"></i></font> &nbsp;&nbsp;
+                   Baby Growth
+                </ion-item>  
+                <!-- <ion-item nav-clear menu-close ng-show="IsUser()" href="#/app/trimester">
+                 Trimesters
+                </ion-item> --> 
+                <ion-item nav-clear menu-close  href="#/app/viewscheme"><font color="darkpink" size="5"><i class="icon ion-eye"></i></font> &nbsp;&nbsp;
+                    View Schemes
+                </ion-item>  
+                <ion-item nav-clear menu-close href="#/app/myprofile"><font color="darkpink" size="5"><i class="icon ion-android-person"></i></font> &nbsp;&nbsp;
+                    Profile
+                </ion-item>                              
+              <ion-item nav-clear menu-close  ng-show="IsAdmin()" href="#/app/home"><font color="darkpink" size="5"><i class="icon ion-chatbubbles"></i></font> &nbsp;&nbsp;
+                    Chat
+                </ion-item>
+                  <ion-item nav-clear menu-close href="#/app/userchat" ng-show="IsUser()"><font color="darkpink" size="5"><i class="icon ion-chatbubble-working"></i></font> &nbsp;&nbsp;
+                    Chat
+                </ion-item>
+                <ion-item nav-clear menu-close ng-click="logout()"><font color="darkpink" size="5"><i class="icon ion-log-out"></i></font> &nbsp;&nbsp;
+                    Logout
+                </ion-item>
+
+            </ion-list>
+        </ion-content>
+      <!--  <ion-footer-bar class="bar-assertive">
+            <button class="button button-clear ion-help" ng-click="showIntro()"></button>
+            <div class="title">SaveMom 1.0</div>
+            <button class="button button-clear ion-gear-a" ng-click="showSettings()"></button>
+        </ion-footer-bar>-->
+    </ion-side-menu>
+</ion-side-menus>

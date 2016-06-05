@@ -1,0 +1,36 @@
+<ion-view title="Checkup Detail" >
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+    <ion-content class="has-header">
+   <ion-refresher pulling-icon="ion-arrow-down-b" on-refresh="refreshItems()">
+          </ion-refresher>
+
+          <div class="list list-inset">
+            <label class="item item-input">
+              <i class="icon ion-search placeholder-icon"></i>
+              <input type="text" placeholder="Search here..." ng-model="search">
+            </label>
+          </div>
+ <ion-list>
+           <!-- <ion-item ng-repeat="checkup in filterdata = (checkupdata | orderBy:reverse | filter:search)"   ng-if="loggedUser.$id === checkup.Userid" >-->
+   <ion-item ng-repeat="checkup in filterdata = (checkupdata | orderBy:reverse | filter:search)" ng-if="loggedUser.$id === checkup.UserId" >
+             <div class="w3-card-4" style="width:100%;">
+             
+            <header class="w3-container w3-blue-grey item-text-wrap" style="padding-bottom: 5px; padding-top: 5px;">
+              <h2 style="color:#FFF; text-align: center; font-size: 25px">Previous Checkup Detail</h2>
+            </header>
+
+                <div class="w3-container item-text-wrap w3-margin-top">
+               
+                <p>{{checkup.Date}} <b>{{checkup.Detail}}</b></p>
+              
+                </div>
+                <br/>
+            </div>           
+            </ion-item>
+        </ion-list>
+
+
+    </ion-content>
+</ion-view>

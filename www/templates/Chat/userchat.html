@@ -1,0 +1,27 @@
+<ion-view title="Mothers Chat">
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+<!--    <ion-nav-buttons side="right" >
+        <button class="button button-icon icon ion-plus-round" ng-click="showNewRoom()"></button>
+    </ion-nav-buttons>-->
+  <ion-content class="has-header">
+       <!--   <ion-list>
+            <ion-item ng-repeat="room in rooms" ui-sref="app.room({roomId: room.$id})">
+                <h2>{{room.name}}</h2>
+                <p>{{room.description}}</p>
+            </ion-item>
+        </ion-list>-->
+
+           <div class="list" >
+            <div class="w3-card-2 w3-container w3-margin-top" ng-repeat="room in rooms">
+                <a ui-sref="app.room({roomId: room.$id})"   class="item  item-icon-right">
+                    
+                     <h2>{{room.name}}</h2>
+                <p>{{room.description}}</p>
+                    <i class="icon ion-chatbubble muted"></i>
+                </a>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

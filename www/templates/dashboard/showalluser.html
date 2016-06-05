@@ -1,0 +1,44 @@
+<ion-view title="All User Details" style="background-color:#f6f6f6">
+    
+
+    <ion-content class="has-header" >
+         <ion-refresher pulling-icon="ion-arrow-down-b" on-refresh="refreshItems()">
+          </ion-refresher>
+
+          <div class="list list-inset">
+            <label class="item item-input">
+              <i class="icon ion-search placeholder-icon"></i>
+              <input type="text" placeholder="Search here..." ng-model="search">
+            </label>
+          </div>
+
+           <div class="item card-item"  ng-repeat="user in filterdata = (alluser | orderBy:reverse | filter:search)" ng-if='user.personalData.role != undefined'>
+            <div   class="card stable-bg ink ink-dark">
+                <div class="item  item-text-wrap">
+                  
+                    <h2><strong>{{user.personalData.email}}</strong></h2>
+                    <h2><strong>{{user.personalData.number}}</strong></h2>
+                    <div class="card-footer text-right">
+                           <a  ui-sref="app.showuser({roomId: user.$id})"><i class="icon ion-ios-list-outline assertive"></i> view</a>
+                      <!--  <i class="icon ion-heart assertive"></i> 23-->
+                     <!--   <div class="pull-left">
+                      <i class="icon ion-clock assertive"></i> {{case.created_at | date}}
+                        </div>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+      <!--  <ion-list>
+            <ion-item ng-repeat="user in filterdata = (alluser | orderBy:reverse | filter:search)" ng-if='user.personalData.role != undefined' ui-sref="app.showuser({roomId: user.$id})">
+                <h2>{{user.personalData.email}}</h2>
+               
+                  <p>{{user.personalData.number}}</p>
+            </ion-item>
+        </ion-list>-->
+    <div ng-if="alluser !== undefined && !alluser.length" class="no-results">
+    <ion-spinner icon="spiral"></ion-spinner>
+
+      <h2 style="text-align: center">Loading from Server Wait</h2>
+    </div>
+    </ion-content>
+</ion-view>

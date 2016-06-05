@@ -1,0 +1,20 @@
+<ion-view title="AddSlot" >
+    <ion-content>
+        <form ng-submit="addParkingSlot()">
+            <div class="list">
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Company Name</span>
+                    <input type="text" ng-model="slot.company" placeholder="Company Name">
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Total slot</span>
+                    <input type="text" ng-model="slot.total" placeholder="Total Parking Slots">
+                </label>                             
+                <label class="item">
+                    <button class="button button-block button-positive" type="submit">Add Parking Slot</button>
+                </label>
+                
+            </div>
+        </form>
+    </ion-content>
+</ion-view >

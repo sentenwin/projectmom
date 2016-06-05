@@ -1,0 +1,26 @@
+<ion-modal-view>
+    <ion-header-bar class="bar-assertive">
+        <h1 class="title">Create New Chat</h1>
+        <div class="buttons">
+            <button class="button button-clear" ng-click="closeNewRoom()">Close</button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <form ng-submit="saveNewRoom()">
+            <div class="list">
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Chat Name</span>
+                    <input type="text" ng-model="room.name" placeholder="Chat Name">
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Chat Description</span>
+                    <input type="text" ng-model="room.desc" placeholder="Chat Description">
+                </label>
+
+                <label class="item">
+                    <button class="button button-block button-assertive" type="submit">Save</button>
+                </label>
+            </div>
+        </form>
+    </ion-content>
+</ion-modal-view>

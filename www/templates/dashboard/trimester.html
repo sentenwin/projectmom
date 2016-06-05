@@ -1,0 +1,68 @@
+<ion-view title="Trimester" >
+   <!-- <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>-->
+<ion-tabs class="tabs-striped tabs-color-assertive tabs-icon-top">
+
+  <ion-tab title="Baby Growth" icon-on="ion-arrow-graph-up-right" icon-off="ion-arrow-graph-up-right" href="#/app/growth">
+    <!-- Tab 1 content -->
+  </ion-tab>
+
+  <ion-tab title="Trimester" icon-on="ion-calendar" icon-off="ion-ios-calendar-outline" href="#/app/trimester">
+    <!-- Tab 2 content -->
+  </ion-tab>
+
+ <!-- <ion-tab title="Settings" icon-on="ion-ios-clock" icon-off="ion-ios-clock-outline">
+  
+  </ion-tab>-->
+
+</ion-tabs>
+    <ion-content class="has-header padding">
+
+
+       <div class="w3-card-4" ng-repeat="item in about">
+<br>
+  <div class="w3-container w3-center w3-light-grey w3-card-2" >
+  <img src="img/cal.jpg" alt="Trimester" style="width:100%" >
+ </div>
+    <div class="w3-container  w3-white w3-card-2 w3-margin-top" style="width:100%; font-color:black"><br><b>
+   {{item.description}}
+ </b> </div>
+</div><br>
+
+         <div class="w3-card-4 list padding"  >
+          <div ng-repeat="trimester in trimesters" type="item-text-wrap">
+                <a ui-sref="app.trimesterdetail({trimesterid: trimester.id})" class="item item-avatar item-icon-right">
+                    <img ng-src="{{trimester.Img}}">
+                      <h2 ><b>{{trimester.title1}}</b></h2>
+                      <i class="icon ion-chevron-right icon-accessory"></i>
+
+                </a>
+              </div><br><br><br>
+            </div>
+ <!--   <div class="w3-card-4"  ng-repeat="item in about">
+             
+            <header class="w3-container w3-red w3-text-red item-text-wrap" style="padding-bottom: 5px; padding-top: 5px;">
+              <h2 style="color:#FFF; text-align: center; font-size: 25px">{{item.name}}</h2>
+            </header>
+
+                <div class="w3-container item-text-wrap w3-margin-top">
+               
+                <p> <b>{{item.description}}</b></p>
+              
+                </div>
+                <br/>
+            </div> 
+       
+        <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="trimester in trimesters" type="item-text-wrap"  ui-sref="app.trimesterdetail({trimesterid: trimester.id})">
+       <img ng-src="{{trimester.Img}}">
+        <h2>{{trimester.title1}}</h2>
+     
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+        
+      </ion-item>-->
+    
+    </ion-content>
+</ion-view>

@@ -1,0 +1,99 @@
+<ion-view title="Login" hide-back-button="true">
+    <ion-content scroll="true"  style="background: url(img/loginbg.JPG) center; background-size: cover; text-align:center;">
+
+
+        <form class="form-signin" role="form" name="signForm">
+            <div class="list">
+                <label class="item item-input item-floating-label" style="color:#FFF">
+                    <span class="input-label" >Email Address</span>
+                    <input type="email" name="email" ng-model="user.email" placeholder="Email Address">
+                </label>
+                <label class="item item-input item-floating-label" style="color:#FFF">
+                    <span class="input-label">Password</span>
+                    <input type="password" name="password" ng-model="user.password" placeholder="Password">
+                </label>
+            </div>
+            <!--<p style="color:red;" ng-show="regError">{{regErrorMessage}}</p>-->
+            <button class="button button-block button-positive" ng-click="SignIn($event)">
+                Log In
+            </button>
+        </form>
+        <div align=center><a ui-sref="forgot">Forgot Password</a></div>    
+    </ion-content>
+</ion-view>
+
+<!--
+
+   <ion-view title="Login" hide-back-button="true">
+   <ion-content scroll="false" id="social-login">
+        <form>
+
+            <div>
+                <i class="fa fa-google-plus google-plus-color"></i>
+            </div>
+            <div class="sub-header">No need create account, <br/>Use your Google plus to login</div>
+
+            <div class="ng-hide" ng-show="!isLogin">
+                <a class="md-raised social-button md-button md-default-theme  google-plus-color-background"
+                  ng-click="SignOther('google')">
+                    LOG IN WITH GOOGLE PLUS
+                </a>
+                <br/>
+                <a ng-click="SignOther('facebook')" class="md-raised md-button md-default-theme social-default-button facebook-background " style="color:#FFF;">Facebook</a>
+                <a ng-click="SignOther('twitter')" class="md-raised md-button md-default-theme social-default-button" style="color:#FFF; background-color: #00aced;">twitter</a>
+
+                <div class="footer">Would like to create an account? <a ui-sref="register">Sign up</a>
+                </div>
+            </div>
+        </form>
+
+    </ion-content>
+    </ion-view>
+    -->
+<!--
+<ion-view style="background: #d73d32 center; background-size: cover;" hide-back-button="true">
+    <ion-nav-title style="background: #00BED4">
+        <div align=center>Log In</div>
+    </ion-nav-title>
+    <ion-content class="intro">
+
+        <div align="center" style="margin-top: 30px; margin-bottom: 30px;" >
+                    <img src="img/Ionizer Logo Thumb.png">
+        </div>
+        <form class="form-signin" role="form" name="signForm">
+            <div class="list">
+                <label class="item item-input item-floating-label" style="color:#FFF">
+                    <span class="input-label" >Email Address</span>
+                    <input type="email" name="email" ng-model="user.email" placeholder="Email Address">
+                </label>
+                <label class="item item-input item-floating-label" style="color:#FFF">
+                    <span class="input-label">Password</span>
+                    <input type="password" name="password" ng-model="user.password" placeholder="Password">
+                </label>
+            </div>
+            <p style="color:red;" ng-show="regError">{{regErrorMessage}}</p>
+            <button class="button button-block button-positive" ng-click="SignIn($event)">
+                Log In
+            </button>
+        </form>
+
+
+        <div align=center><a ui-sref="register">Sign Up</a></div>
+        <div align=center><a ui-sref="forgot">Forgot Password</a></div>
+     <div align="center" class="button-bar" style="width: 100%">
+                 
+        <button class="button button-block button-positive " style="background-color: #3b5998" ng-click="SignOther('facebook')">
+            <font size="7px" color="white"><b><i class="ion-social-facebook-outline icon-center"></i></b></font>
+        </button>
+
+        <button class="button button-block button-royal  " style="background-color: #00aced;" ng-click="SignOther('twitter')">
+           <font size="7px" color="white"><b><i class="icon-center ion-social-twitter-outline"></i></b></font> 
+        </button>
+        
+        <button class="button button-block button-assertive  " ng-click="SignOther('google')">
+            <font size="7px" color="white"><b><i class="icon-center ion-social-google-outline"></i></b></font>
+        </button>
+    </div>       
+    </ion-content>
+</ion-view>
+-->

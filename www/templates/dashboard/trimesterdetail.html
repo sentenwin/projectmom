@@ -1,0 +1,49 @@
+<ion-view title="{{trimester.title1}}" style="text-align:center;">
+    
+    <ion-content class="has-header padding">
+ 
+    
+
+            <div class="w3-card-4 w3-container" style="width:100%;">
+         
+    
+           <header class="w3-container" style="padding-bottom: 3px; padding-top: 3px;">
+                        <h3 style="color:#b71c1c; text-align: center; font-size: 25px">{{trimester.title2}}</h3>
+                        <!--<h4 style="color:#b71c1c; text-align: center; font-size: 25px">{{trimester.title2}}</h4>-->
+            </header>
+          </div>
+  
+  <div class="card w3-container "  ng-show="trimester.data1 != null">
+ <div class="item item-body">
+         <p class="w3-text-black">{{trimester.data1}}</p>
+                  <br>
+                
+  </div>
+  </div>
+
+  <div class="card w3-container" ng-show="trimester.data != null">
+ <div class="item item-body">
+         <p  class="w3-text-black">{{trimester.data}}</p>
+                  <br>
+                
+  </div>
+  </div>  
+ <div class="card w3-container" ng-show="trimester.data2 != null">
+ <div class="item item-body">
+         <p  class="w3-text-black">{{trimester.data2}}</p>
+                  <br>
+                
+  </div>
+  </div>
+ <div class="card w3-container" ng-show="trimester.data3 != null">
+ <div class="item item-body">
+         <p class="w3-text-black" >{{trimester.data3}}</p>
+                  <br>
+                
+  </div>
+  </div>
+            
+      
+               </ion-content>
+</ion-view> 
+    

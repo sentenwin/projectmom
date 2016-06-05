@@ -1,0 +1,32 @@
+<ion-view title="Parking Slot Details" style="background-color:#f6f6f6">
+    <ion-content>
+     <header class="w3-container w3-blue-grey w3-padding" id="myHeader">
+    <div class="w3-center">
+    <h2 class="w3-blue-grey"><font color="white">Your Booking Details</h2>
+    <p> Here you can see your parking slot details</p>
+    </font>
+  </div>
+</header>
+        <form >
+            <div class="list">
+                 <label class="item item-input ">
+                    <span class="input-label">Slot ID</span>
+                    <input type="text" ng-disabled="true" ng-model="bookslot.slotid " placeholder="Slot Id">
+                </label>           
+                <label class="item item-input ">
+                    <span class="input-label">Vechile Number</span>
+                    <input type="text" ng-disabled="true" ng-model="bookslot.vechile" placeholder="KA-1234">
+                </label>
+                  <label class="item item-input ">
+                    <span class="input-label">Start Time</span>
+                    <input type="time" ng-disabled="true" ng-model="bookslot.stiming" placeholder="Start Time">
+                </label>
+               <label class="item item-input ">
+                    <span class="input-label">End Time</span>
+                    <input type="time" ng-disabled="true" ng-model="bookslot.etiming" placeholder="End Time">
+                </label>                                        
+            </div>
+        </form>
+    </ion-content>
+</ion-view >
+

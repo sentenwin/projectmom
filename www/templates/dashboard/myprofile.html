@@ -1,0 +1,35 @@
+<ion-view title="Myprofile" >
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button menu-toggle="right" ng-click="editSettings()" class="button button-icon icon ion-edit"></button>
+    </ion-nav-buttons>
+    <ion-content class="padding">
+
+    <div class=" w3-card  w3-light-grey">
+        <div class="profile-item">
+          <div class="profile-picture big-profile-picture">
+                                <img ng-if="(loggedUser.personalData.avatar_personal && loggedUser.personalData.avatar_personal !== '')" ng-src="data:image/jpeg;base64,{{loggedUser.personalData.avatar_personal}}" width="100%" ng-click="showAvatar()" />
+                    
+                    <img ng-if="(!loggedUser.personalData.avatar_personal || loggedUser.personalData.avatar_personal == '') && (loggedUser.personalData.avatar && loggedUser.personalData.avatar !== '')" ng-src="{{loggedUser.personalData.avatar}}" ng-click="showAvatar()">
+
+                    <img ng-if="(!loggedUser.personalData.avatar_personal || loggedUser.personalData.avatar_personal == '') && (!loggedUser.personalData.avatar || loggedUser.personalData.avatar == '')" ng-src="{{defAvatar}}" ng-click="showAvatar()">
+          </div>
+          <h2 class="profile-name dark">{{loggedUser.personalData.first_name}} {{loggedUser.personalData.last_name}}</h2>
+
+          
+        </div>
+
+     
+              </div>
+                 <div class="card">
+  <div class="item item-text-wrap">
+   <strong>User Name </strong>&nbsp;{{loggedUser.personalData.username}}<br>
+  
+ 
+   <strong>Email Id </strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{loggedUser.personalData.email}}
+  </div>
+</div>
+    </ion-content>
+</ion-view>

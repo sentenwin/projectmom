@@ -1,0 +1,66 @@
+<ion-view title="AddUser" >
+    <ion-content scroll="true" >
+<form class="w3-container  w3-card-4 w3-white">
+  <!--<h2>Input Form</h2>-->
+  <div class="w3-group">      
+    <input class="w3-input" type="text" style="width:90%" ng-model="user.email" placeholder="Enter Your Email">
+    <label class="w3-label" style="color:black;"><b> Email Address</b></label>
+     <p ng-show="regForm.email.$invalid">Enter a valid email.</p>
+  </div>
+  <div class="w3-group">      
+    <input class="w3-input" type="password" ng-model="user.password" style="width:90%" ng-minlength="8" placeholder="Enter Your Password" >
+    <label class="w3-label" style="color:black;"><b>Password</b></label>
+    <p ng-show="regForm.password.$error.minlength">Min password length is 7 characters.</p>
+  </div>
+   <div class="w3-group">               
+                <div class="item item-divider">  Select User category                                                
+                </div>
+                <ion-radio ng-repeat="item in clientSideList"
+                           ng-value="item.value"
+                           ng-model="data.clientSide">
+                  {{ item.text }}
+                </ion-radio>
+
+            </div>
+            <p style="color:red;" ng-show="regError">{{regErrorMessage}}</p>
+        
+  <div class="w3-group">
+  
+ <button class="w3-btn w3-red  w3-section" style="color:white; font-family:georgia" ng-click="SignUp()" ng-disabled="!user.email || !user.password">&nbsp;&nbsp;&nbsp;Add&nbsp;&nbsp;&nbsp;</button>
+ 
+  </div>
+</form>
+     <!--  <form class="form-signin" role="form" name="regForm" style="padding-top: 10px;">
+            <div class="list">
+           
+                <label class="item item-input ">
+                    <span class="input-label">Email Address</span>
+                    <input type="email" name="email" ng-model="user.email" placeholder="Email Address">
+                    <p ng-show="regForm.email.$invalid">Enter a valid email.</p>
+                </label>
+                <label class="item item-input ">
+                    <span class="input-label">Password</span>
+                    <input type="password" name="password" ng-model="user.password" placeholder="Password" ng-minlength="8">
+                    <p ng-show="regForm.password.$error.minlength">Min password length is 8 characters.</p>
+                </label> 
+            
+               <label class="item item-input ">
+                    <span class="input-label">User category</span>
+                </label>  
+                <div class="item item-divider">                                                  
+                </div>
+                <ion-radio ng-repeat="item in clientSideList"
+                           ng-value="item.value"
+                           ng-model="data.clientSide">
+                  {{ item.text }}
+                </ion-radio>
+
+            </div>
+            <p style="color:red;" ng-show="regError">{{regErrorMessage}}</p>
+            <button class="button button-block  button-assertive" ng-click="SignUp()" ng-disabled="!user.email || !user.password">
+                Add
+            </button>
+        </form>-->
+
+    </ion-content>
+</ion-view>

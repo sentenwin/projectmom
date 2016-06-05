@@ -1,0 +1,38 @@
+<ion-view title="Parking Slot Details" >
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+     <ion-content direction="y" scrollbar-y="false" class="padding">
+         <ion-refresher pulling-icon="ion-arrow-down-b" on-refresh="refreshItems()">
+          </ion-refresher>
+
+          <div class="list list-inset">
+            <label class="item item-input">
+              <i class="icon ion-search placeholder-icon"></i>
+              <input type="text" placeholder="Search by SlotId(OP-12)" ng-model="search">
+            </label>
+          </div>
+
+
+          <ion-list>
+            <ion-item ng-repeat="park in filterdata = (booking | orderBy:reverse | filter:search)" ng-if="(park.slotid && park.slotid !==' ')">
+              <div class="list card">
+                 <label class="item item-input ">
+                    <span class="input-label">Slot Id</span>
+                    <input type="text" ng-model="park.slotid" >
+                </label>             
+                <label class="item item-input ">
+                    <span class="input-label">Vechile Number</span>
+                    <input type="text" ng-model="park.vechile" >
+                </label>
+                </div>                                       
+            </ion-item>
+        </ion-list>
+    <div ng-if="booking !== undefined && !booking.length" class="no-results">
+    <ion-spinner icon="spiral"></ion-spinner>
+    <div class="list item">
+      <h1>Loading from Server Wait</h1>
+      </div>
+    </div>
+    </ion-content>
+</ion-view>
